@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DetailViewController.swift
 //  BlockList
 //
 //  Created by Stephen Turton on 11/20/18.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
-
