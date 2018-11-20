@@ -20,7 +20,23 @@
 		E9D0B17621A4AA2800DC56CB /* BlockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B17521A4AA2800DC56CB /* BlockData.swift */; };
 		E9D0B17821A4AE6300DC56CB /* BlockDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B17721A4AE6300DC56CB /* BlockDetailViewModel.swift */; };
 		E9D0B17B21A4B86E00DC56CB /* BlockItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B17A21A4B86E00DC56CB /* BlockItemTableViewCell.swift */; };
+		E9D0B18D21A4C60A00DC56CB /* BlockListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B18C21A4C60A00DC56CB /* BlockListViewModelTests.swift */; };
+		E9D0B19021A4C8F200DC56CB /* get_info.json in Resources */ = {isa = PBXBuildFile; fileRef = E9D0B18F21A4C8F200DC56CB /* get_info.json */; };
+		E9D0B19321A4C93A00DC56CB /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B19221A4C93A00DC56CB /* XCTestCase.swift */; };
+		E9D0B19521A4CD2F00DC56CB /* BlockchainInfoResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B19421A4CD2F00DC56CB /* BlockchainInfoResponseTests.swift */; };
+		E9D0B19721A4D15200DC56CB /* get_block.json in Resources */ = {isa = PBXBuildFile; fileRef = E9D0B19621A4D15200DC56CB /* get_block.json */; };
+		E9D0B19921A4D18500DC56CB /* BlockResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B19821A4D18500DC56CB /* BlockResponseTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E9D0B18521A4C49100DC56CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E962B3AB21A47B3C001A0248 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E962B3B221A47B3C001A0248;
+			remoteInfo = BlockList;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E962B3B321A47B3C001A0248 /* BlockList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,10 +54,25 @@
 		E9D0B17521A4AA2800DC56CB /* BlockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockData.swift; sourceTree = "<group>"; };
 		E9D0B17721A4AE6300DC56CB /* BlockDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockDetailViewModel.swift; sourceTree = "<group>"; };
 		E9D0B17A21A4B86E00DC56CB /* BlockItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockItemTableViewCell.swift; sourceTree = "<group>"; };
+		E9D0B18021A4C49100DC56CB /* BlockListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9D0B18421A4C49100DC56CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9D0B18C21A4C60A00DC56CB /* BlockListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockListViewModelTests.swift; sourceTree = "<group>"; };
+		E9D0B18F21A4C8F200DC56CB /* get_info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_info.json; sourceTree = "<group>"; };
+		E9D0B19221A4C93A00DC56CB /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		E9D0B19421A4CD2F00DC56CB /* BlockchainInfoResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainInfoResponseTests.swift; sourceTree = "<group>"; };
+		E9D0B19621A4D15200DC56CB /* get_block.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_block.json; sourceTree = "<group>"; };
+		E9D0B19821A4D18500DC56CB /* BlockResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockResponseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E962B3B021A47B3C001A0248 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9D0B17D21A4C49100DC56CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				E962B3B521A47B3C001A0248 /* BlockList */,
+				E9D0B18121A4C49100DC56CB /* BlockListTests */,
 				E962B3B421A47B3C001A0248 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				E962B3B321A47B3C001A0248 /* BlockList.app */,
+				E9D0B18021A4C49100DC56CB /* BlockListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,6 +201,52 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E9D0B18121A4C49100DC56CB /* BlockListTests */ = {
+			isa = PBXGroup;
+			children = (
+				E9D0B19121A4C91000DC56CB /* Extensions */,
+				E9D0B18E21A4C8B500DC56CB /* Stubs */,
+				E9D0B18B21A4C5C300DC56CB /* Test Cases */,
+				E9D0B18A21A4C4B400DC56CB /* Supporting Files */,
+			);
+			path = BlockListTests;
+			sourceTree = "<group>";
+		};
+		E9D0B18A21A4C4B400DC56CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9D0B18421A4C49100DC56CB /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E9D0B18B21A4C5C300DC56CB /* Test Cases */ = {
+			isa = PBXGroup;
+			children = (
+				E9D0B18C21A4C60A00DC56CB /* BlockListViewModelTests.swift */,
+				E9D0B19421A4CD2F00DC56CB /* BlockchainInfoResponseTests.swift */,
+				E9D0B19821A4D18500DC56CB /* BlockResponseTests.swift */,
+			);
+			path = "Test Cases";
+			sourceTree = "<group>";
+		};
+		E9D0B18E21A4C8B500DC56CB /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				E9D0B19621A4D15200DC56CB /* get_block.json */,
+				E9D0B18F21A4C8F200DC56CB /* get_info.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		E9D0B19121A4C91000DC56CB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E9D0B19221A4C93A00DC56CB /* XCTestCase.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,6 +267,24 @@
 			productReference = E962B3B321A47B3C001A0248 /* BlockList.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E9D0B17F21A4C49100DC56CB /* BlockListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9D0B18721A4C49100DC56CB /* Build configuration list for PBXNativeTarget "BlockListTests" */;
+			buildPhases = (
+				E9D0B17C21A4C49100DC56CB /* Sources */,
+				E9D0B17D21A4C49100DC56CB /* Frameworks */,
+				E9D0B17E21A4C49100DC56CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9D0B18621A4C49100DC56CB /* PBXTargetDependency */,
+			);
+			name = BlockListTests;
+			productName = BlockListTests;
+			productReference = E9D0B18021A4C49100DC56CB /* BlockListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,6 +297,11 @@
 				TargetAttributes = {
 					E962B3B221A47B3C001A0248 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					E9D0B17F21A4C49100DC56CB = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						TestTargetID = E962B3B221A47B3C001A0248;
 					};
 				};
 			};
@@ -217,6 +319,7 @@
 			projectRoot = "";
 			targets = (
 				E962B3B221A47B3C001A0248 /* BlockList */,
+				E9D0B17F21A4C49100DC56CB /* BlockListTests */,
 			);
 		};
 /* End PBXProject section */
@@ -229,6 +332,15 @@
 				E962B3C121A47B3D001A0248 /* LaunchScreen.storyboard in Resources */,
 				E962B3BE21A47B3D001A0248 /* Assets.xcassets in Resources */,
 				E962B3BC21A47B3C001A0248 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9D0B17E21A4C49100DC56CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9D0B19721A4D15200DC56CB /* get_block.json in Resources */,
+				E9D0B19021A4C8F200DC56CB /* get_info.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +364,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9D0B17C21A4C49100DC56CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9D0B19921A4D18500DC56CB /* BlockResponseTests.swift in Sources */,
+				E9D0B19321A4C93A00DC56CB /* XCTestCase.swift in Sources */,
+				E9D0B19521A4CD2F00DC56CB /* BlockchainInfoResponseTests.swift in Sources */,
+				E9D0B18D21A4C60A00DC56CB /* BlockListViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E9D0B18621A4C49100DC56CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E962B3B221A47B3C001A0248 /* BlockList */;
+			targetProxy = E9D0B18521A4C49100DC56CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E962B3BA21A47B3C001A0248 /* Main.storyboard */ = {
@@ -428,6 +559,49 @@
 			};
 			name = Release;
 		};
+		E9D0B18821A4C49100DC56CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JNQ5K33WN4;
+				INFOPLIST_FILE = "BlockListTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.stephenturton.BlockListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlockList.app/BlockList";
+			};
+			name = Debug;
+		};
+		E9D0B18921A4C49100DC56CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JNQ5K33WN4;
+				INFOPLIST_FILE = "BlockListTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.stephenturton.BlockListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlockList.app/BlockList";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -445,6 +619,15 @@
 			buildConfigurations = (
 				E962B3C621A47B3D001A0248 /* Debug */,
 				E962B3C721A47B3D001A0248 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9D0B18721A4C49100DC56CB /* Build configuration list for PBXNativeTarget "BlockListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9D0B18821A4C49100DC56CB /* Debug */,
+				E9D0B18921A4C49100DC56CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

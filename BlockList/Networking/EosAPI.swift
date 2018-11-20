@@ -93,11 +93,6 @@ class EosAPI {
                 do {
                     let infoResponse = try decoder.decode(BlockchainInfoResponse.self, from: data)
                     
-                    if let weakSelf = self {
-                        weakSelf.test()
-                    }
-                    
-                    
                     self?.getBlock(for: infoResponse.headBlockId, completion: { (response, error) in
                         completion(response,error)
                     })
@@ -108,10 +103,6 @@ class EosAPI {
                 }
             }
             }.resume()
-    }
-    
-    func test() {
-        return
     }
     
     

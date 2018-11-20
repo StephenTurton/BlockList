@@ -63,9 +63,5 @@ extension BlockResponse: BlockData {
     var signature: String {
         return producerSignature
     }
-    
-    func block(at index: Int) {
-        
-    }
 }
 

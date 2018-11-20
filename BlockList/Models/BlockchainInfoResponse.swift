@@ -28,7 +28,7 @@ struct BlockchainInfoResponse : Codable {
     
     let serverVersion: String
     let chainID: String
-    let headBlockNum: Int // TODO STurton is this an int or larger
+    let headBlockNum: Int
     let lastIrreversibleBlockNum: Int
     let lastIrreversibleBlockId: String
     let headBlockId: String
@@ -36,8 +36,8 @@ struct BlockchainInfoResponse : Codable {
     let headBlockProducer: String
     let virtualBlockCpuLimit: Int
     let virtualBlockNetLimit: Int
-    let blockCpuLimit: Int // TODO STurton is this an int or larger
-    let blockNetLimit: Int // TODO STurton is this an int or larger
+    let blockCpuLimit: Int
+    let blockNetLimit: Int 
     let serverVersionString: String
 }
 
