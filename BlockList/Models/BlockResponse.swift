@@ -55,3 +55,17 @@ struct BlockResponse : Codable {
     var data: Data?
 }
 
+extension BlockResponse: BlockData {
+    var transactionCount: Int {
+        return transactions.count
+    }
+    
+    var signature: String {
+        return producerSignature
+    }
+    
+    func block(at index: Int) {
+        
+    }
+}
+

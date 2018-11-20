@@ -47,7 +47,7 @@ class EosAPI {
     
     func getBlockList(startBlockId id: String, total: Int, limit: Int) {
         
-        guard total < limit else {
+        guard total <= limit else {
             didFetchBlockData?(nil,nil)
             return
         }
@@ -79,6 +79,11 @@ class EosAPI {
         }
         
         URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
+            
+            if let response = response as? HTTPURLResponse {
+                print("Status Code: \(response.statusCode)")
+            }
+            
             if let error = error {
                 print("Failed to retrieve blockchain information \(error)")
                 completion(nil,.noDataAvailable)
@@ -122,6 +127,11 @@ class EosAPI {
         request.httpBody = parameters.data(using: .utf8)
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            if let response = response as? HTTPURLResponse {
+                print("Status Code: \(response.statusCode)")
+            }
+            
             if let error = error {
                 print("Failed to retrieve block \(error)")
                 completion(nil,.noDataAvailable)

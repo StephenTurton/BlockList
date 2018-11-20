@@ -17,6 +17,9 @@
 		E9D0B16E21A48EDC00DC56CB /* BlockListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B16D21A48EDC00DC56CB /* BlockListViewModel.swift */; };
 		E9D0B17021A4986600DC56CB /* BlockResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B16F21A4986600DC56CB /* BlockResponse.swift */; };
 		E9D0B17221A498EC00DC56CB /* BlockchainInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B17121A498EC00DC56CB /* BlockchainInfoResponse.swift */; };
+		E9D0B17621A4AA2800DC56CB /* BlockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B17521A4AA2800DC56CB /* BlockData.swift */; };
+		E9D0B17821A4AE6300DC56CB /* BlockDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B17721A4AE6300DC56CB /* BlockDetailViewModel.swift */; };
+		E9D0B17B21A4B86E00DC56CB /* BlockItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B17A21A4B86E00DC56CB /* BlockItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		E9D0B16D21A48EDC00DC56CB /* BlockListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockListViewModel.swift; sourceTree = "<group>"; };
 		E9D0B16F21A4986600DC56CB /* BlockResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockResponse.swift; sourceTree = "<group>"; };
 		E9D0B17121A498EC00DC56CB /* BlockchainInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainInfoResponse.swift; sourceTree = "<group>"; };
+		E9D0B17521A4AA2800DC56CB /* BlockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockData.swift; sourceTree = "<group>"; };
+		E9D0B17721A4AE6300DC56CB /* BlockDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockDetailViewModel.swift; sourceTree = "<group>"; };
+		E9D0B17A21A4B86E00DC56CB /* BlockItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +71,13 @@
 			isa = PBXGroup;
 			children = (
 				E962B3C821A47BC7001A0248 /* Application Delegate */,
+				E9D0B17321A4A49F00DC56CB /* Models */,
 				E962B3D121A488D3001A0248 /* Networking */,
+				E9D0B17421A4A9E900DC56CB /* Protocols */,
 				E962B3CB21A47C55001A0248 /* Resources */,
 				E962B3CA21A47C39001A0248 /* Storyboards */,
 				E962B3CC21A47C71001A0248 /* Supporting Files */,
+				E9D0B17921A4B83B00DC56CB /* Views */,
 				E962B3C921A47BEF001A0248 /* View Controllers */,
 				E962B3D421A48A04001A0248 /* ViewModels */,
 			);
@@ -121,8 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				E962B3D221A4890E001A0248 /* EosAPI.swift */,
-				E9D0B16F21A4986600DC56CB /* BlockResponse.swift */,
-				E9D0B17121A498EC00DC56CB /* BlockchainInfoResponse.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -131,8 +138,34 @@
 			isa = PBXGroup;
 			children = (
 				E9D0B16D21A48EDC00DC56CB /* BlockListViewModel.swift */,
+				E9D0B17721A4AE6300DC56CB /* BlockDetailViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E9D0B17321A4A49F00DC56CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E9D0B16F21A4986600DC56CB /* BlockResponse.swift */,
+				E9D0B17121A498EC00DC56CB /* BlockchainInfoResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E9D0B17421A4A9E900DC56CB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E9D0B17521A4AA2800DC56CB /* BlockData.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E9D0B17921A4B83B00DC56CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9D0B17A21A4B86E00DC56CB /* BlockItemTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,13 +239,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9D0B17821A4AE6300DC56CB /* BlockDetailViewModel.swift in Sources */,
 				E962B3D321A4890E001A0248 /* EosAPI.swift in Sources */,
 				E9D0B17221A498EC00DC56CB /* BlockchainInfoResponse.swift in Sources */,
 				E9D0B16E21A48EDC00DC56CB /* BlockListViewModel.swift in Sources */,
+				E9D0B17B21A4B86E00DC56CB /* BlockItemTableViewCell.swift in Sources */,
 				E962B3D021A48120001A0248 /* DetailViewController.swift in Sources */,
 				E962B3CE21A4810F001A0248 /* MasterViewController.swift in Sources */,
 				E9D0B17021A4986600DC56CB /* BlockResponse.swift in Sources */,
 				E962B3B721A47B3C001A0248 /* AppDelegate.swift in Sources */,
+				E9D0B17621A4AA2800DC56CB /* BlockData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

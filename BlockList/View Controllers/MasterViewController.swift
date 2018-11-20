@@ -10,6 +10,10 @@ import UIKit
 
 final class MasterViewController: UIViewController {
 
+    private enum AlertType {
+        case noDataAvailable
+    }
+    
     fileprivate var collapseDetailViewController = true
     
     var viewModel: BlockListViewModel? {
@@ -22,9 +26,13 @@ final class MasterViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         splitViewController?.delegate = self
+        
+        title = "Block List"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -38,16 +46,45 @@ final class MasterViewController: UIViewController {
         
         viewController.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
         viewController.navigationItem.leftItemsSupplementBackButton = true
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            viewController.loadViewIfNeeded()
+            if let block = viewModel?.block(at:indexPath.row) {
+                viewController.viewModel = BlockDetailViewModel(block:block)
+            }
+        }
+    }
+    
+    @IBAction func refreshButtonClicked(_ sender: Any) {
+        viewModel?.refresh()
     }
     
     private func setupViewModel(with viewModel: BlockListViewModel) {
-        viewModel.didUpdateBlockList = { (error) in
+        viewModel.didUpdateBlockList = { [weak self] (error) in
             if let _ = error {
-                // present error
+                self?.presentAlert(of: .noDataAvailable)
             } else {
-                // update UI
+                self?.tableView.reloadData()
             }
         }
+    }
+    
+    private func presentAlert(of alertType: AlertType) {
+        
+        let title: String
+        let message: String
+        
+        switch alertType {
+        case .noDataAvailable:
+            title = "Unable to fetch Blockchain List"
+            message = "The application is unable to fetch the blockchain data. Please make sure your device is connected over Wi-Fi or cellular."
+        }
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true)
     }
 }
 
@@ -62,15 +99,25 @@ extension MasterViewController: UISplitViewControllerDelegate {
 }
 
 extension MasterViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showBlockDetailSegue", sender: self)
+    }
 }
 
 extension MasterViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: BlockItemTableViewCell.reuseIdentifier, for: indexPath) as? BlockItemTableViewCell else {
+            fatalError("Unable to Dequeue BlockItemTableViewCell")
+        }
+        
+        let block = viewModel?.block(at:indexPath.row)
+        cell.blockNameLabel.text = "Block \(block?.blockNumber ?? 0)"
+        cell.accessoryType = .disclosureIndicator
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModel?.blockCount ?? 0
     }
 }
 
