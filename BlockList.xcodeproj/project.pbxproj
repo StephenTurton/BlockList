@@ -13,6 +13,10 @@
 		E962B3C121A47B3D001A0248 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E962B3BF21A47B3D001A0248 /* LaunchScreen.storyboard */; };
 		E962B3CE21A4810F001A0248 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E962B3CD21A4810F001A0248 /* MasterViewController.swift */; };
 		E962B3D021A48120001A0248 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E962B3CF21A48120001A0248 /* DetailViewController.swift */; };
+		E962B3D321A4890E001A0248 /* EosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E962B3D221A4890E001A0248 /* EosAPI.swift */; };
+		E9D0B16E21A48EDC00DC56CB /* BlockListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B16D21A48EDC00DC56CB /* BlockListViewModel.swift */; };
+		E9D0B17021A4986600DC56CB /* BlockResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B16F21A4986600DC56CB /* BlockResponse.swift */; };
+		E9D0B17221A498EC00DC56CB /* BlockchainInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B17121A498EC00DC56CB /* BlockchainInfoResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		E962B3C221A47B3D001A0248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E962B3CD21A4810F001A0248 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		E962B3CF21A48120001A0248 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E962B3D221A4890E001A0248 /* EosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EosAPI.swift; sourceTree = "<group>"; };
+		E9D0B16D21A48EDC00DC56CB /* BlockListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockListViewModel.swift; sourceTree = "<group>"; };
+		E9D0B16F21A4986600DC56CB /* BlockResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockResponse.swift; sourceTree = "<group>"; };
+		E9D0B17121A498EC00DC56CB /* BlockchainInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainInfoResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +65,12 @@
 			isa = PBXGroup;
 			children = (
 				E962B3C821A47BC7001A0248 /* Application Delegate */,
+				E962B3D121A488D3001A0248 /* Networking */,
 				E962B3CB21A47C55001A0248 /* Resources */,
 				E962B3CA21A47C39001A0248 /* Storyboards */,
 				E962B3CC21A47C71001A0248 /* Supporting Files */,
 				E962B3C921A47BEF001A0248 /* View Controllers */,
+				E962B3D421A48A04001A0248 /* ViewModels */,
 			);
 			path = BlockList;
 			sourceTree = "<group>";
@@ -105,6 +115,24 @@
 				E962B3C221A47B3D001A0248 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E962B3D121A488D3001A0248 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E962B3D221A4890E001A0248 /* EosAPI.swift */,
+				E9D0B16F21A4986600DC56CB /* BlockResponse.swift */,
+				E9D0B17121A498EC00DC56CB /* BlockchainInfoResponse.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E962B3D421A48A04001A0248 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E9D0B16D21A48EDC00DC56CB /* BlockListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +206,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E962B3D321A4890E001A0248 /* EosAPI.swift in Sources */,
+				E9D0B17221A498EC00DC56CB /* BlockchainInfoResponse.swift in Sources */,
+				E9D0B16E21A48EDC00DC56CB /* BlockListViewModel.swift in Sources */,
 				E962B3D021A48120001A0248 /* DetailViewController.swift in Sources */,
 				E962B3CE21A4810F001A0248 /* MasterViewController.swift in Sources */,
+				E9D0B17021A4986600DC56CB /* BlockResponse.swift in Sources */,
 				E962B3B721A47B3C001A0248 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

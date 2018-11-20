@@ -12,6 +12,16 @@ final class MasterViewController: UIViewController {
 
     fileprivate var collapseDetailViewController = true
     
+    var viewModel: BlockListViewModel? {
+        didSet {
+            guard let viewModel = viewModel else {
+                return
+            }
+            
+            setupViewModel(with: viewModel)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         splitViewController?.delegate = self
@@ -28,6 +38,16 @@ final class MasterViewController: UIViewController {
         
         viewController.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
         viewController.navigationItem.leftItemsSupplementBackButton = true
+    }
+    
+    private func setupViewModel(with viewModel: BlockListViewModel) {
+        viewModel.didUpdateBlockList = { (error) in
+            if let _ = error {
+                // present error
+            } else {
+                // update UI
+            }
+        }
     }
 }
 

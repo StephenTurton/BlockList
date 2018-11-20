@@ -18,8 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let splitViewController = self.window?.rootViewController as? UISplitViewController {
             splitViewController.preferredDisplayMode = .allVisible
             
-            if let navigationController = splitViewController.viewControllers.last as? UINavigationController {
-                navigationController.topViewController?.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+            if let splitViewController = self.window?.rootViewController as? UISplitViewController {
+                splitViewController.preferredDisplayMode = .allVisible
+                
+                if let navigationController = splitViewController.viewControllers.last as? UINavigationController {
+                    navigationController.topViewController?.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+                }
+                
+                if let navigationController = splitViewController.viewControllers.first as? UINavigationController {
+                    if let masterViewController = navigationController.viewControllers.first as? MasterViewController {
+                        masterViewController.viewModel = BlockListViewModel()
+                    }
+                }
             }
         }
         
