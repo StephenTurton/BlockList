@@ -104,8 +104,10 @@
                     <navigationItem key="navigationItem" id="YXc-ga-T0x"/>
                     <connections>
                         <outlet property="producer" destination="8RH-qH-KkQ" id="xO5-v3-9Fk"/>
+                        <outlet property="rawButton" destination="3HU-Lp-OZg" id="mD5-ln-zWy"/>
                         <outlet property="rawTextView" destination="nDB-qV-dlC" id="PiS-TC-7zh"/>
                         <outlet property="signature" destination="buy-iZ-TCt" id="pWF-1v-Qbj"/>
+                        <outlet property="summaryButton" destination="1eh-65-RaR" id="Ffd-9v-FRx"/>
                         <outlet property="summaryStackView" destination="5Up-JC-J7m" id="hqu-1C-dKr"/>
                         <outlet property="transactionCount" destination="dwE-Kr-BVJ" id="iRa-ds-n6v"/>
                     </connections>
@@ -150,7 +152,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ro-Up-0z3">
-                                                    <rect key="frame" x="16" y="10.000000000000002" width="212" height="23.666666666666671"/>
+                                                    <rect key="frame" x="16" y="10.000000000000002" width="256" height="23.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -173,7 +175,7 @@
                                     <outlet property="delegate" destination="W3G-O8-TlZ" id="91N-7j-6T0"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdZ-wx-33W">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdZ-wx-33W">
                                 <rect key="frame" x="126" y="337" width="156" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Refresh Block List"/>
@@ -181,9 +183,15 @@
                                     <action selector="refreshButtonClicked:" destination="W3G-O8-TlZ" eventType="touchUpInside" id="Hdz-GH-nT9"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7Bo-c0-D0G">
+                                <rect key="frame" x="172" y="197" width="20" height="20"/>
+                                <color key="color" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="7Bo-c0-D0G" firstAttribute="centerY" secondItem="Dff-76-qxX" secondAttribute="centerY" id="Cha-lI-0r9"/>
+                            <constraint firstItem="7Bo-c0-D0G" firstAttribute="centerX" secondItem="Dff-76-qxX" secondAttribute="centerX" id="Cvr-F7-8vP"/>
                             <constraint firstItem="ajp-4N-SGS" firstAttribute="bottom" secondItem="bdZ-wx-33W" secondAttribute="bottom" constant="20" id="acA-WW-nkT"/>
                             <constraint firstItem="bdZ-wx-33W" firstAttribute="centerX" secondItem="ezN-dT-dzj" secondAttribute="centerX" id="ecg-DH-xJ6"/>
                             <constraint firstItem="ajp-4N-SGS" firstAttribute="trailing" secondItem="ezN-dT-dzj" secondAttribute="trailing" constant="16" id="iJS-pJ-bh6"/>
@@ -195,6 +203,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="EeC-gL-HnW"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="7Bo-c0-D0G" id="GVj-1w-dei"/>
+                        <outlet property="refreshButton" destination="bdZ-wx-33W" id="8ge-4m-Lbs"/>
                         <outlet property="tableView" destination="ezN-dT-dzj" id="rnn-8i-nqv"/>
                         <segue destination="qre-YN-ckf" kind="showDetail" identifier="showBlockDetailSegue" id="wjm-ub-MGR"/>
                     </connections>

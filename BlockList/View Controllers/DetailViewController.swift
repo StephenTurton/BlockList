@@ -20,18 +20,26 @@ final class DetailViewController: UIViewController {
     
     @IBOutlet weak var rawTextView: UITextView!
     
+    @IBOutlet weak var summaryButton: UIButton!
+    
+    @IBOutlet weak var rawButton: UIButton!
+    
     var viewModel: BlockDetailViewModel? {
         didSet {
             guard let viewModel = viewModel else {
+                setupView()
                 return
             }
             
             setupViewModel(with: viewModel)
+            setupView()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupView()
     }
     
     @IBAction func summaryButtonClicked(_ sender: Any) {
@@ -42,6 +50,27 @@ final class DetailViewController: UIViewController {
     @IBAction func rawButtonClicked(_ sender: Any) {
         summaryStackView.isHidden = true
         rawTextView.isHidden = false
+    }
+
+    private func setupView() {
+        
+        guard let _ = viewModel else {
+            title = ""
+            producer.isHidden = true
+            transactionCount.isHidden = true
+            signature.isHidden = true
+            rawTextView.isHidden = true
+            
+            summaryButton.isEnabled = false
+            rawButton.isEnabled = false
+            return
+        }
+        
+        producer.isHidden = false
+        transactionCount.isHidden = false
+        signature.isHidden = false
+        summaryButton.isEnabled = true
+        rawButton.isEnabled = true
     }
     
     private func setupViewModel(with viewModel: BlockDetailViewModel) {

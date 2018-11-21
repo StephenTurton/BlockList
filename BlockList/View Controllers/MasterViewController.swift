@@ -28,6 +28,15 @@ final class MasterViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var refreshButton: UIButton!
+    
+    @IBOutlet var activityIndicatorView: UIActivityIndicatorView! {
+        didSet {
+            activityIndicatorView.startAnimating()
+            activityIndicatorView.hidesWhenStopped = true
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         splitViewController?.delegate = self
@@ -56,20 +65,34 @@ final class MasterViewController: UIViewController {
     }
     
     @IBAction func refreshButtonClicked(_ sender: Any) {
+        
         viewModel?.refresh()
+        activityIndicatorView.startAnimating()
+        refreshButton.isEnabled = false
+        
+        if let navigationController = self.splitViewController?.viewControllers.last as? UINavigationController {
+            if let viewController = navigationController.topViewController as? DetailViewController {
+                viewController.viewModel = nil
+            }
+        }
     }
     
     private func setupViewModel(with viewModel: BlockListViewModel) {
         viewModel.didUpdateBlockList = { [weak self] (error) in
             if let _ = error {
                 self?.presentAlert(of: .noDataAvailable)
+                self?.refreshButton.isEnabled = true
             } else {
+                self?.activityIndicatorView.stopAnimating()
                 self?.tableView.reloadData()
+                self?.refreshButton.isEnabled = true
             }
         }
     }
     
     private func presentAlert(of alertType: AlertType) {
+        
+        activityIndicatorView.stopAnimating()
         
         let title: String
         let message: String
@@ -91,9 +114,6 @@ final class MasterViewController: UIViewController {
 extension MasterViewController: UISplitViewControllerDelegate {
     
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
-        
-        // Return true to prevent the default of showing the secondary
-        // view controller.
         return collapseDetailViewController
     }
 }
