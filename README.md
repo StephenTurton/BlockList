@@ -7,6 +7,8 @@ This application will show the contents of the most recent 20 blocks on the EOS 
 - You can see the raw details for the block by clicking on the Raw toggle button.
 - The application will render the results in splitsceen mode on larger phones and iPads.
 
+The minimum deployment target for this application is iOS 11.0
+
 ![1](https://user-images.githubusercontent.com/1455808/48818307-b8c95380-ed18-11e8-87cb-f6b9289bb8c8.png)
 
 ![2](https://user-images.githubusercontent.com/1455808/48818347-eadab580-ed18-11e8-8bdf-1a01e888fa42.png)
