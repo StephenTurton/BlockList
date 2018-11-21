@@ -38,7 +38,6 @@ struct BlockResponse : Codable {
         }
     }
     
-    
     enum CodingKeys: String, CodingKey {
         case timestamp = "timestamp"
         case producer = "producer"

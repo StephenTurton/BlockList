@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BlockListViewModel {
+final class BlockListViewModel {
     
     private let eosAPI = {
         return EosAPI()

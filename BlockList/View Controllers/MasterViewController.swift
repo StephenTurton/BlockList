@@ -14,6 +14,13 @@ final class MasterViewController: UIViewController {
         case noDataAvailable
     }
     
+    struct ErrorText {
+        static let noDataAvailableTitle = "Unable to fetch Blockchain List"
+        static let noDataAvailableMessage = "The application is unable to fetch the blockchain data. Please make sure your device is connected over Wi-Fi or cellular."
+    }
+    
+    let viewTitle = "Block List"
+    
     fileprivate var collapseDetailViewController = true
     
     var viewModel: BlockListViewModel? {
@@ -41,7 +48,7 @@ final class MasterViewController: UIViewController {
         super.viewDidLoad()
         splitViewController?.delegate = self
         
-        title = "Block List"
+        title = viewTitle
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -99,8 +106,8 @@ final class MasterViewController: UIViewController {
         
         switch alertType {
         case .noDataAvailable:
-            title = "Unable to fetch Blockchain List"
-            message = "The application is unable to fetch the blockchain data. Please make sure your device is connected over Wi-Fi or cellular."
+            title = ErrorText.noDataAvailableTitle
+            message = ErrorText.noDataAvailableMessage
         }
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)

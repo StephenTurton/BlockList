@@ -48,7 +48,6 @@ class EosAPI {
         })
     }
     
-    
     private func getBlockList(startBlockId id: String, total: Int, limit: Int) {
         
         guard total <= limit else {
@@ -74,7 +73,6 @@ class EosAPI {
             }
         })
     }
-    
     
     private func getHeadBlock(completion: @escaping DidFetchBlockDataCompletion) {
         
@@ -108,7 +106,6 @@ class EosAPI {
             }
             }.resume()
     }
-    
     
     private func getBlock(for id: String, completion: @escaping DidFetchBlockDataCompletion) {
         

@@ -8,12 +8,11 @@
 
 import UIKit
 
-class BlockItemTableViewCell: UITableViewCell {
+final class BlockItemTableViewCell: UITableViewCell {
 
     static var reuseIdentifier: String {
         return String(describing: self)
     }
     
     @IBOutlet weak var blockNameLabel: UILabel!
-    
 }

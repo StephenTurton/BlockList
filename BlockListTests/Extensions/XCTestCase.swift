@@ -14,6 +14,5 @@ extension XCTestCase {
         let url = bundle.url(forResource: name,withExtension:`extension`)
         
         return try! Data(contentsOf: url!)
-    }
-    
+    }    
 }
