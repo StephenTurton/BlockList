@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        //Setup SplitViewController and inject BlockListViewModel into the MasterView
         if let splitViewController = self.window?.rootViewController as? UISplitViewController {
             splitViewController.preferredDisplayMode = .allVisible
             

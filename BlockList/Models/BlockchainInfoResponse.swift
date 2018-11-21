@@ -8,6 +8,8 @@
 
 import Foundation
 
+//Model used to store results from calling /chain/get_info
+
 struct BlockchainInfoResponse : Codable {
     
     enum CodingKeys: String, CodingKey {

@@ -20,10 +20,6 @@ class BlockResponseTests: XCTestCase {
         blockResponse = try!decoder.decode(BlockResponse.self, from: data)
     }
 
-    override func tearDown() {
-    }
-
-   
     func testProducerIsSet() {
         XCTAssertEqual(blockResponse.producer,"eosflytomars")
     }
@@ -31,5 +27,4 @@ class BlockResponseTests: XCTestCase {
     func testTransactionCount() {
          XCTAssertEqual(blockResponse.transactionCount,48)
     }
-
 }

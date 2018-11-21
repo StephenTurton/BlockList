@@ -20,12 +20,13 @@
 		E9D0B17621A4AA2800DC56CB /* BlockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B17521A4AA2800DC56CB /* BlockData.swift */; };
 		E9D0B17821A4AE6300DC56CB /* BlockDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B17721A4AE6300DC56CB /* BlockDetailViewModel.swift */; };
 		E9D0B17B21A4B86E00DC56CB /* BlockItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B17A21A4B86E00DC56CB /* BlockItemTableViewCell.swift */; };
-		E9D0B18D21A4C60A00DC56CB /* BlockListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B18C21A4C60A00DC56CB /* BlockListViewModelTests.swift */; };
 		E9D0B19021A4C8F200DC56CB /* get_info.json in Resources */ = {isa = PBXBuildFile; fileRef = E9D0B18F21A4C8F200DC56CB /* get_info.json */; };
 		E9D0B19321A4C93A00DC56CB /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B19221A4C93A00DC56CB /* XCTestCase.swift */; };
 		E9D0B19521A4CD2F00DC56CB /* BlockchainInfoResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B19421A4CD2F00DC56CB /* BlockchainInfoResponseTests.swift */; };
 		E9D0B19721A4D15200DC56CB /* get_block.json in Resources */ = {isa = PBXBuildFile; fileRef = E9D0B19621A4D15200DC56CB /* get_block.json */; };
 		E9D0B19921A4D18500DC56CB /* BlockResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0B19821A4D18500DC56CB /* BlockResponseTests.swift */; };
+		E9E161D321A59F11003E0E35 /* MasterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E161D221A59F11003E0E35 /* MasterViewControllerTests.swift */; };
+		E9E161D521A5A0BB003E0E35 /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E161D421A5A0BB003E0E35 /* DetailViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,12 +57,13 @@
 		E9D0B17A21A4B86E00DC56CB /* BlockItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockItemTableViewCell.swift; sourceTree = "<group>"; };
 		E9D0B18021A4C49100DC56CB /* BlockListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D0B18421A4C49100DC56CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9D0B18C21A4C60A00DC56CB /* BlockListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockListViewModelTests.swift; sourceTree = "<group>"; };
 		E9D0B18F21A4C8F200DC56CB /* get_info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_info.json; sourceTree = "<group>"; };
 		E9D0B19221A4C93A00DC56CB /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		E9D0B19421A4CD2F00DC56CB /* BlockchainInfoResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainInfoResponseTests.swift; sourceTree = "<group>"; };
 		E9D0B19621A4D15200DC56CB /* get_block.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_block.json; sourceTree = "<group>"; };
 		E9D0B19821A4D18500DC56CB /* BlockResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockResponseTests.swift; sourceTree = "<group>"; };
+		E9E161D221A59F11003E0E35 /* MasterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewControllerTests.swift; sourceTree = "<group>"; };
+		E9E161D421A5A0BB003E0E35 /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,9 +225,10 @@
 		E9D0B18B21A4C5C300DC56CB /* Test Cases */ = {
 			isa = PBXGroup;
 			children = (
-				E9D0B18C21A4C60A00DC56CB /* BlockListViewModelTests.swift */,
 				E9D0B19421A4CD2F00DC56CB /* BlockchainInfoResponseTests.swift */,
 				E9D0B19821A4D18500DC56CB /* BlockResponseTests.swift */,
+				E9E161D221A59F11003E0E35 /* MasterViewControllerTests.swift */,
+				E9E161D421A5A0BB003E0E35 /* DetailViewControllerTests.swift */,
 			);
 			path = "Test Cases";
 			sourceTree = "<group>";
@@ -368,10 +371,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9E161D321A59F11003E0E35 /* MasterViewControllerTests.swift in Sources */,
+				E9E161D521A5A0BB003E0E35 /* DetailViewControllerTests.swift in Sources */,
 				E9D0B19921A4D18500DC56CB /* BlockResponseTests.swift in Sources */,
 				E9D0B19321A4C93A00DC56CB /* XCTestCase.swift in Sources */,
 				E9D0B19521A4CD2F00DC56CB /* BlockchainInfoResponseTests.swift in Sources */,
-				E9D0B18D21A4C60A00DC56CB /* BlockListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +532,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNQ5K33WN4;
 				INFOPLIST_FILE = "$(SRCROOT)/BlockList/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -547,7 +551,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNQ5K33WN4;
 				INFOPLIST_FILE = "$(SRCROOT)/BlockList/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

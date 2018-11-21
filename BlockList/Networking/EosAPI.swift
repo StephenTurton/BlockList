@@ -12,6 +12,7 @@ private enum BlockOneService {
     static let baseUrl = URL(string:"https://api.eosnewyork.io/v1")
 }
 
+// Lightweight network code to call eosnewyork routes for this application
 
 class EosAPI {
     
@@ -31,6 +32,8 @@ class EosAPI {
     
     var didFetchBlockData: DidFetchBlockDataCompletion? = nil
     
+    //Get the list of the latest blocks on the public blockchain, returns
+    //a maximum of 'limit' entries.
     func getMostRecentBlocks(limit: Int) {
         
         getHeadBlock(completion: { [weak self] (response, error) in
@@ -45,7 +48,8 @@ class EosAPI {
         })
     }
     
-    func getBlockList(startBlockId id: String, total: Int, limit: Int) {
+    
+    private func getBlockList(startBlockId id: String, total: Int, limit: Int) {
         
         guard total <= limit else {
             didFetchBlockData?(nil,nil)
@@ -72,7 +76,7 @@ class EosAPI {
     }
     
     
-    func getHeadBlock(completion: @escaping DidFetchBlockDataCompletion) {
+    private func getHeadBlock(completion: @escaping DidFetchBlockDataCompletion) {
         
         guard let url = getInfoUrl else {
             return
@@ -106,7 +110,8 @@ class EosAPI {
     }
     
     
-    func getBlock(for id: String, completion: @escaping DidFetchBlockDataCompletion) {
+    private func getBlock(for id: String, completion: @escaping DidFetchBlockDataCompletion) {
+        
         guard let url = getBlockUrl else {
             return
         }

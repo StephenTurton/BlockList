@@ -8,6 +8,9 @@
 
 import Foundation
 
+//Model used to store results of a Block for example results
+//from the /chain/get_block route
+
 struct BlockResponse : Codable {
     
     struct Transaction: Codable {

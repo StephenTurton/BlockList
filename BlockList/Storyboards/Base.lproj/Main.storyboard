@@ -13,7 +13,7 @@
         <!--Detail View Controller-->
         <scene sceneID="62K-Ev-y6h">
             <objects>
-                <viewController id="CcI-eC-vkK" customClass="DetailViewController" customModule="BlockList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="CcI-eC-vkK" customClass="DetailViewController" customModule="BlockList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Khw-ee-gDg">
                         <rect key="frame" x="0.0" y="0.0" width="531.66666666666663" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,7 +135,7 @@
         <!--Master View Controller-->
         <scene sceneID="wvO-04-0ri">
             <objects>
-                <viewController id="W3G-O8-TlZ" customClass="MasterViewController" customModule="BlockList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MasterViewController" id="W3G-O8-TlZ" customClass="MasterViewController" customModule="BlockList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dff-76-qxX">
                         <rect key="frame" x="0.0" y="0.0" width="364" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
