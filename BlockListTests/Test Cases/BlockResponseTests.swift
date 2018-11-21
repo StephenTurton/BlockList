@@ -27,5 +27,9 @@ class BlockResponseTests: XCTestCase {
     func testProducerIsSet() {
         XCTAssertEqual(blockResponse.producer,"eosflytomars")
     }
+    
+    func testTransactionCount() {
+         XCTAssertEqual(blockResponse.transactionCount,48)
+    }
 
 }
